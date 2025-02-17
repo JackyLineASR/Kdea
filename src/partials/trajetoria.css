@@ -1,0 +1,90 @@
+.trajetoria{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    & .trajetoria-background{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: var(--color--gray);
+        z-index: -1;
+    }
+
+    & .trajetoria-top {
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5%;
+        width: 100%;
+        max-width: 1280px;
+
+        & h1 {
+            width: 60%;
+        }
+
+    }
+
+    & .trajetoria-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1280px;
+        position: relative;
+        width: 100%;
+        padding: 5%;
+        gap: 20px;
+
+        & .trajetoria-card{
+            padding: 30px;
+            background-color: var(--color--white);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+
+            & h2 {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.trajetoria-card:nth-child(1)::before{
+    content: '';
+    width: 35%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: var(--color--yellow);
+}
+
+.trajetoria-card:nth-child(2)::before{
+    content: '';
+    width: 60%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: var(--color--yellow);
+}
+
+.trajetoria-card:nth-child(3)::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: var(--color--yellow);
+}

@@ -1,0 +1,113 @@
+.revista{
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .revista-container{
+        border: 1px solid red;
+        width: 100%;
+        max-width: 1280px;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+
+        & .revista-texts {
+            border: 1px solid red;
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 30px;
+
+            & h1 {
+                margin-bottom: -10px;
+            }
+
+            & .revista-timer{
+                border: 1px solid red;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                position: relative;
+
+                & .revista-meses-dias{
+                    border: 1px solid red;
+                    display: flex;
+                    gap: 20px;
+                    padding: 10px;
+
+                    & .revista-meses{
+                        border: 1px solid red;
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 5px;
+
+                        & span{
+                            font-size: 40px;
+                            color: var(--color--yellow);
+                        }
+                    }
+
+                    & .revista-dias{
+                        border: 1px solid red;
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 5px;
+
+                        & span{
+                            font-size: 40px;
+                            color: var(--color--yellow);
+                        }
+                    }
+                }
+
+                & .revista-horario{
+                    border: 1px solid red;
+                    position: absolute;
+                    right: 20px;
+                }
+            }
+        }
+
+        & .revista-image{
+            border: 1px solid red;
+            width: 45%;
+            height: 550px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            & span {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                background-color: #00000020;
+                backdrop-filter: blur(5px);
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.revista-background{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color--gray);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
