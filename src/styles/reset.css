@@ -35,7 +35,7 @@ ul, ol {
 /* Remove decorações padrão de links */
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--color--black);
 }
 
 /* Define imagens responsivas */
