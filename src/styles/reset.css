@@ -57,17 +57,12 @@ button, input, textarea, select {
 button {
     -webkit-appearance: none;
     appearance: none;
-    cursor: none;
+    cursor: pointer;
 }
 
-/* Ajuste para evitar problemas com altura no iPhone */
-body, html {
-    height: 100%;
-}
 
 /* Evita movimentação excessiva no scroll */
 html, body {
-    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
 

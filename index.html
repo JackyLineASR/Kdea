@@ -22,6 +22,8 @@
 
     <!-- Libs -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -55,9 +57,9 @@
      <section class="home">
         <div class="home-background"></div>
         <header class="header">
-            <nav class="navbar">
-                <img src="src/assets/kdea-construtora-logo-black.png" alt="logo da construtora k'dea">
-                <button class="button-v1" onclick={OpenWpp()}>
+            <nav class="navbar" data-aos="fade-up" data-aos-delay="0">
+                <img src="src/assets/kdea-construtora-logo-black.png" alt="logo da construtora k'dea" data-aos="fade-right" data-aos-delay="700">
+                <button class="button-v1" onclick={OpenWpp()} data-aos="fade-left" data-aos-delay="700">
                     Solicitar orçamento
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -66,13 +68,13 @@
 
         <main class="home-main">
             <article class="home-texts">
-                <h1>
+                <h1 data-aos="fade-up-right" data-aos-delay="0">
                     A <b>construção do futuro</b> já está no presente
                 </h1>
-                <p>
+                <p data-aos="fade-right" data-aos-delay="200">
                     A construção civil deu um grande passo na tecnologia, proporcionando mais, gastando menos
                 </p>
-                <div class="home-texts-buttons">
+                <div class="home-texts-buttons" data-aos="fade-up" data-aos-delay="500">
                     <button class="button-v2" onclick={OpenWpp()}>
                         <i class="fa-solid fa-arrow-right"></i>
                         <span>Solicitar orçamento</span>
@@ -85,7 +87,7 @@
 
             <div class="home-images">
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" data-aos="fade-up-left" data-aos-delay="300">
                         <div class="swiper-slide"><img src="/src/assets/casa02.webp" alt="Imagem 1"></div>
                         <div class="swiper-slide"><img src="/src/assets/casa03.webp" alt="Imagem 2"></div>
                         <div class="swiper-slide"><img src="/src/assets/casa04.webp" alt="Imagem 3"></div>
@@ -104,7 +106,7 @@
         </div>
 
         <article class="sobre-texts">
-            <h1>
+            <h1 data-aos="fade-up" data-aos-delay="0"> 
                 Conheça sobre a construtora <b>K'dea</b>
             </h1>
             <p>
@@ -710,6 +712,20 @@
             }
         } 
     </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+            duration: 1200,
+            easing: 'ease-in-out',
+            offset: 100,
+            once: true
+            });
+        });
+
+    </script>
+
 
     <script src="/src/scripts/trajetoria.js"></script>
     <script src="/src/scripts/numbers.js"></script>

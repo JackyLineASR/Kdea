@@ -34,10 +34,6 @@ p {
     }
 }
 
-*{
-    cursor: none;
-}
-
 ::-webkit-scrollbar{
     width: 6px;
     background-color: var(--color--black);
@@ -45,7 +41,7 @@ p {
 
 ::-webkit-scrollbar-thumb{
     background-color: var(--color--gray);
-}
+}   
 
 .custom-cursor {
     position: absolute;
@@ -126,7 +122,7 @@ p {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     right: 25px;
     bottom: 20px;
     overflow: hidden;
