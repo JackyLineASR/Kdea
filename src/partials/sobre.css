@@ -70,6 +70,18 @@
             width: 100%;
         }
 
+        & span {
+            display: inline-block;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 1s, opacity 1s; /* Animação do aumento do número */
+        }
+
+        & span.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
         & .sobre-numbers{
             width: 100%;
             display: flex;
@@ -98,6 +110,7 @@
                 & .sobre-bar {
                     border-bottom: 1px solid var(--color--yellow);
                     height: 1px;
+                    transition: width 2s ease-out; 
                 }
             }
         }
