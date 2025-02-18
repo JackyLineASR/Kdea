@@ -24,8 +24,18 @@
         width: 100%;
         max-width: 1280px;
 
+        @media (max-width: 768px){
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
         & h1 {
             width: 60%;
+            
+            @media (max-width: 768px){
+                width: 100%;
+            }
         }
 
     }
@@ -40,6 +50,11 @@
         width: 100%;
         padding: 5%;
         gap: 20px;
+
+        @media (max-width: 768px){
+            flex-direction: column;
+            padding: 10% 5%;
+        }
 
         & .trajetoria-card{
             padding: 30px;

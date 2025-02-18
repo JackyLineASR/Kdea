@@ -18,12 +18,21 @@
         width: 100%;
         border: 1px solid red;
 
+        @media (max-width: 768px){
+            flex-direction: column-reverse;
+            gap: 25px;
+        }
+
         & p{
             font-size: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 5px;
+
+            @media (max-width: 768px){
+                text-align: center;
+            }
             
             & img{
                 width: 70px;

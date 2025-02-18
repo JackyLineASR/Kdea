@@ -16,6 +16,12 @@
         justify-content: space-between;
         gap: 50px;
 
+        @media (max-width: 768px){
+            flex-direction: column;
+            gap: 25px;
+            padding: 10% 5%;
+        }
+
         & .revista-texts {
             border: 1px solid red;
             width: 55%;
@@ -24,6 +30,10 @@
             align-items: flex-start;
             justify-content: center;
             gap: 30px;
+
+            @media (max-width: 768px){
+                width: 100%;
+            }
 
             & h1 {
                 margin-bottom: -10px;
@@ -43,6 +53,12 @@
                     display: flex;
                     gap: 20px;
                     padding: 10px;
+
+                    @media (max-width: 768px){
+                        padding: 0;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
 
                     & .revista-meses{
                         border: 1px solid red;
@@ -77,6 +93,11 @@
                     border: 1px solid red;
                     position: absolute;
                     right: 20px;
+
+                    @media (max-width: 768px){
+                        position: relative;
+                        right: 0;
+                    }
                 }
             }
         }
@@ -89,6 +110,10 @@
             align-items: center;
             justify-content: center;
             position: relative;
+
+            @media (max-width: 768px){
+                width: 100%;
+            }
 
             & span {
                 position: absolute;

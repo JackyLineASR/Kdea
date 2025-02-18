@@ -15,6 +15,12 @@
         justify-content: space-between;
         padding: 5% 5% 3% 5%;
         position: relative;
+
+        @media (max-width: 768px){
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
     }
 
     & .porque-container {
@@ -36,6 +42,11 @@
             border-bottom: 1px solid var(--color--black);
             gap: 50px;
 
+            @media (max-width: 768px){
+                flex-direction: column-reverse;
+                gap: 30px;
+            }
+
             & .porque-card-texts{
                 border: 1px solid red;
                 width: 55%;
@@ -43,6 +54,11 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 60px;
+
+                @media (max-width: 768px){
+                    width: 100%;
+                    gap: 30px;
+                }
 
                 & .porque-card-texts-top{
                     border: 1px solid red;
@@ -81,6 +97,11 @@
                 border: 1px solid red;
                 width: 45%;
                 height: 300px;
+
+                @media (max-width: 768px){
+                    width: 100%;
+                    height: 200px;
+                }
 
                 & img {
                     width: 100%;

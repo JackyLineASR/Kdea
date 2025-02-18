@@ -12,6 +12,11 @@
     padding: 5%;
     gap: 50px;
 
+    @media (max-width: 768px){
+        flex-direction: column;
+        gap: 25px;    
+    }
+
     & .footer-left {
         border: 1px solid red;
         width: 50%;
@@ -20,6 +25,10 @@
         align-items: flex-start;
         justify-content: center;
         gap: 20px;
+
+        @media (max-width: 768px){
+            width: 100%;
+        }
 
         & .footer-form {
             border: 1px solid red;
@@ -114,6 +123,10 @@
         align-items: center;
         gap: 10px;
 
+        @media (max-width: 768px){
+            width: 100%;
+        }
+
         & .footer-question{
             width: 100%;
             padding: 10px 15px;
@@ -134,11 +147,17 @@
                 }
             }
 
-            & .footer-question-open{
-                border: 1px solid red;
+            .footer-question-open {
+                padding: 10px;
                 margin-top: 10px;
+                background-color: #f9f9f9;
                 display: none;
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
             }
+            
         }
     }
 }
