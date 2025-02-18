@@ -214,6 +214,6 @@
     z-index: -1;
 
     @media (max-width: 768px){
-        opacity: 0.2;    
+        opacity: 0.3;    
     }
 }
