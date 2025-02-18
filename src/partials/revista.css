@@ -7,7 +7,6 @@
     justify-content: center;
 
     & .revista-container{
-        border: 1px solid red;
         width: 100%;
         max-width: 1280px;
         padding: 5%;
@@ -23,7 +22,6 @@
         }
 
         & .revista-texts {
-            border: 1px solid red;
             width: 55%;
             display: flex;
             flex-direction: column;
@@ -40,7 +38,6 @@
             }
 
             & .revista-timer{
-                border: 1px solid red;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -49,7 +46,6 @@
                 position: relative;
 
                 & .revista-meses-dias{
-                    border: 1px solid red;
                     display: flex;
                     gap: 20px;
                     padding: 10px;
@@ -61,7 +57,6 @@
                     }
 
                     & .revista-meses{
-                        border: 1px solid red;
                         display: flex;
                         align-items: flex-start;
                         flex-direction: column;
@@ -75,7 +70,6 @@
                     }
 
                     & .revista-dias{
-                        border: 1px solid red;
                         display: flex;
                         align-items: flex-start;
                         flex-direction: column;
@@ -90,7 +84,6 @@
                 }
 
                 & .revista-horario{
-                    border: 1px solid red;
                     position: absolute;
                     right: 20px;
 
@@ -103,7 +96,6 @@
         }
 
         & .revista-image{
-            border: 1px solid red;
             width: 45%;
             height: 550px;
             display: flex;
