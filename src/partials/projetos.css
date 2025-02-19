@@ -165,3 +165,16 @@
 .projetos-card.open .projetos-card-right i {
     transform: rotate(90deg)!important;
 }
+
+
+@media (max-width:768px){
+    .projetos-card.open .projetos-card-carrossel {
+        & div:nth-child(1){
+            display: none;
+        }
+
+        & div:nth-child(2){
+            width: 100%;    
+        }
+    }
+}

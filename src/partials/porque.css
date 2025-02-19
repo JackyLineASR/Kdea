@@ -17,6 +17,7 @@
 
         @media (max-width: 768px){
             flex-direction: column;
+            padding: 10% 5% 5% 5%;
             gap: 20px;
             align-items: flex-start;
         }
@@ -45,6 +46,7 @@
             @media (max-width: 768px){
                 flex-direction: column-reverse;
                 gap: 30px;
+                padding: 0;
             }
 
             & .porque-card-texts{
@@ -58,7 +60,9 @@
 
                 @media (max-width: 768px){
                     width: 100%;
+                    height: auto;
                     gap: 30px;
+                    padding: 20px;
                 }
 
                 & .porque-card-texts-top{

@@ -126,6 +126,7 @@ p {
     font-weight: 400;
     position: relative;
     transition: all .3s ease-in-out;
+    color: var(--color--black);
 
     @media(max-width: 768px){
         font-size: 12px;
@@ -182,6 +183,7 @@ p {
     position: relative;
     transition: all .3s ease-in-out;
     border-radius: 500px;
+    color: var(--color--black);
 
     @media(max-width: 768px){
         font-size: 12px;
@@ -244,8 +246,8 @@ p {
     transition: all .3s ease-in-out;
     border: 1px solid var(--color--black);
     background: transparent;
-    color: var(--color--black);
     position: relative;
+    color: var(--color--black);
 
     @media(max-width: 768px){
         font-size: 12px;
@@ -269,6 +271,50 @@ p {
 }
 
 .button-v3:hover{
+    font-weight: 500;
+    transform: scale(0.96);
+}
+
+
+
+.button-v4 {
+    padding: 10px 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+    transition: all .3s ease-in-out;
+    border: 1px solid var(--color--white);
+    background: transparent;
+    position: relative;
+    color: var(--color--white);
+
+    @media(max-width: 768px){
+        font-size: 12px;
+    }
+}
+
+.button-v4::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color--yellow);
+    transition: all .4s ease-in-out;
+    z-index: -1;
+}
+
+.button-v4:hover::before{
+    width: 100%;
+}
+
+.button-v4:hover{
     font-weight: 500;
     transform: scale(0.96);
 }

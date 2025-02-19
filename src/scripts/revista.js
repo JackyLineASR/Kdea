@@ -18,10 +18,13 @@ function updateCountdown() {
     const minutesRemaining = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
     const secondsRemaining = Math.floor((timeRemaining % (1000 * 60)) / 1000);
     
+    // Formatar horário com dois dígitos
+    const formattedTime = `${String(hoursRemaining).padStart(2, '0')}:${String(minutesRemaining).padStart(2, '0')}:${String(secondsRemaining).padStart(2, '0')}`;
+
     // Atualizar os valores na página
     document.querySelector('.revista-meses span').textContent = monthsRemaining;
     document.querySelector('.revista-dias span').textContent = daysRemaining;
-    document.querySelector('.revista-horario span').textContent = `${hoursRemaining}:${minutesRemaining}:${secondsRemaining}`;
+    document.querySelector('.revista-horario span').textContent = formattedTime;
 
     // Atualizar a data final na imagem
     document.querySelector('.revista-image span b').textContent = nextDate.toLocaleString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' });

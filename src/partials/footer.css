@@ -13,7 +13,8 @@
 
     @media (max-width: 768px){
         flex-direction: column;
-        gap: 25px;    
+        gap: 45px;    
+        padding: 10% 5%;
     }
 
     & .footer-left {
@@ -26,6 +27,7 @@
 
         @media (max-width: 768px){
             width: 100%;
+            gap: 30px;
         }
 
         & .footer-form {
@@ -120,6 +122,8 @@
     
         @media (max-width: 768px){
             width: 100%;
+            gap: 15px;
+            padding-bottom: 20px;
         }
     
         & .footer-question {
