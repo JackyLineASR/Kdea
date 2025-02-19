@@ -32,7 +32,7 @@
 
         @media (max-width: 768px){
             flex-direction: column;
-            gap: 25px;
+            gap: 40px;
             padding: 10% 5%;
         }
 
@@ -42,19 +42,31 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
 
             @media (max-width: 768px){
                 width: 100%;
+                gap: 30px;
             }
 
             & h1 {
+                font-size: 60px;
+                line-height: 100%;
                 margin-bottom: -10px;
                 color: #fff;
+
+                @media (max-width:768px){
+                    font-size: 40px;   
+                }
             }
 
             & p {
                 color: #fff;
+                font-size: 20px;
+
+                @media (max-width:768px){
+                    font-size: 16px;    
+                }
             }
 
             & .revista-timer{
@@ -136,6 +148,10 @@
             overflow: hidden;
             transition: all .3s ease-in-out;
 
+            @media (max-width:768px){
+                height: 500px;        
+            }
+
             &:hover{
                 transform: scale(1.1) rotate(-2deg);
                 box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
@@ -184,7 +200,7 @@
         
                 @media (max-width: 768px) {
                     top: 10px;
-                    right: -5.5%;
+                    right: 0;
                 }
             }
         }
