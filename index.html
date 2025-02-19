@@ -23,7 +23,7 @@
     <!-- Libs -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -607,40 +607,38 @@
                 <p data-aos="fade-up" data-aos-delay="300">
                     A cada <b>3 MESES</b> coroamos uma obra para ser a nova capa da revista de construções da K’dea
                 </p>
-    
+        
                 <div class="revista-timer">
-                    <p data-aos="fade-up" data-aos-delay="200">Tempo para a próxima revista</p>
-    
+        
                     <div class="revista-meses-dias">
                         <div class="revista-meses" data-aos="fade-up" data-aos-delay="500">
-                            <span>{meses}</span>
+                            <span id="meses">0</span>
                             <p>Meses</p>
                         </div>
                         <div class="revista-dias" data-aos="fade-up" data-aos-delay="500">
-                            <span>{dias}</span>
+                            <span id="dias">0</span>
                             <p>Dias</p>
                         </div>
                     </div>
-    
+        
                     <div class="revista-horario" data-aos="fade-up" data-aos-delay="700">
-                        <span>
-                            {horas}:{minutos}:{segundos}
-                        </span>
+                        <span id="horario">00:00:00</span>
                     </div>
                 </div>
-    
+        
                 <button class="button-v3" data-aos="fade-up" data-aos-delay="300">
                     Baixar revista
                 </button>
             </article>
-    
+        
             <div class="revista-image">
                 <span>
-                    Novo lançamento no dia: <b>{data final do relogio}</b>
+                    Novo lançamento no dia: <b id="data-final"></b>
                 </span>
                 <img src="/src/assets/capa-da-revista.jpg" alt="revista da construtora k'dea" loading="lazy" data-aos="fade-up" data-aos-delay="400">
             </div>
         </main>
+        
         
      </section>
 
@@ -787,13 +785,17 @@
 
     </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js"></script>
 
+    <script src="/src/scripts/revista.js"></script>
     <script src="/src/scripts/trajetoria.js"></script>
     <script src="/src/scripts/numbers.js"></script>
     <script src="/src/scripts/projetos.js"></script>
     <script src="src/scripts/faq.js"></script>
     <script src="/src/scripts/carrossel.js"></script>
     <script src="/src/scripts/cursor.js"></script>
+
+    
 
 </body>
 </html>
