@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 
     @media (max-width: 768px){
         gap: 30px;    
@@ -66,6 +67,11 @@
                 justify-content: center;
                 clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
                 background-color: var(--color--black);
+                transition: all .2s ease;
+
+                &:hover {
+                    transform: scale(0.95);
+                }
 
                 & i {
                     color: var(--color--yellow);
@@ -84,6 +90,20 @@
                 gap: 20px;
                 background-color: var(--color--gray);
                 clip-path: polygon(90% 0, 100% 10%, 100% 100%, 10% 100%, 0 90%, 0 0);
+                transition: all .2s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                    background-color: var(--color--black);
+
+                    & h1 {
+                        color: #fff;
+                    }
+
+                    & p {
+                        color: #fff;
+                    }
+                }
 
                 @media (max-width: 768px){
                     width: 100%;
