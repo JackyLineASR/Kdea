@@ -35,6 +35,11 @@
 </head>
 <body> 
 
+    <div class="preloader">
+        <div class="lamp"></div>
+    </div>
+    
+
     <button class="Btn" onclick={OpenWpp()}>
         <div class="sign">
             <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16">
@@ -778,6 +783,24 @@
             once: true
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                let preloader = document.getElementById("preloader");
+                preloader.style.opacity = "0";
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                    AOS.init(); // Inicia o AOS após o preloader sumir
+                }, 500); // Pequeno delay para suavizar o desaparecimento
+            }, 2000); // Tempo do preloader
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        document.querySelector(".preloader").classList.add("hidden");
+    }, 500); // Tempo total da animação
+});
+
 
     </script>
 

@@ -1,5 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.lamp {
+    width: 100px;
+    height: 100px;
+    background-image: url('/src/assets/lampada.png'); /* Ícone da lâmpada contorno */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: lampSwing 0.2s ease-in-out infinite alternate, lampEffect 1s steps(1, end) forwards;
+}
+
+/* Animação de balançar */
+@keyframes lampSwing {
+    0% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes lampEffect {
+    15% {
+        background-image: url('/src/assets/lampada2.png'); /* Ícone da lâmpada preenchida */
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Esconder a preloader após a animação */
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
 h1 {
     font-size: 30px;
     font-weight: 300;
