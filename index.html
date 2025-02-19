@@ -35,6 +35,9 @@
 </head>
 <body> 
 
+    <div class="footer-gradient"></div>
+
+
     <div class="preloader">
         <div class="lamp"></div>
     </div>
@@ -803,6 +806,36 @@
 
 
     </script>
+
+<script>
+    window.addEventListener('scroll', function() {
+      const footerGradient = document.querySelector('.footer-gradient');
+      const sections = document.querySelectorAll('.revista'); // Seleciona as seções com fundo escuro
+      let hideGradient = false;
+  
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        const hasDarkBackground = section.querySelector('.revista-background');
+  
+        // Verifica se a seção está visível na tela
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          // Verifica se a seção tem a classe com fundo escuro
+          if (hasDarkBackground) {
+            hideGradient = true;
+          }
+        }
+      });
+  
+      // Exibe ou esconde o degradê com base na lógica
+      if (hideGradient) {
+        footerGradient.style.display = 'none';
+      } else {
+        footerGradient.style.display = 'block';
+      }
+    });
+  </script>
+  
+  
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js"></script>
 
