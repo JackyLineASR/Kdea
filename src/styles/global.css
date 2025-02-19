@@ -32,7 +32,7 @@
     background-image: url('/src/assets/lampada.png'); /* Ícone da lâmpada contorno */
     background-size: contain;
     background-repeat: no-repeat;
-    animation: lampSwing 0.2s ease-in-out infinite alternate, lampEffect 1s steps(1, end) forwards;
+    animation: lampSwing 0.2s ease-in-out infinite alternate, lampEffect 2s steps(1, end) forwards;
 }
 
 /* Animação de balançar */
