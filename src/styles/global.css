@@ -126,8 +126,8 @@ p {
     z-index: 19000;
 
     @media (max-width:768px){
-        right: 10px;
-        bottom: 10px;
+        right: 15px;
+        bottom: 15px;
     }
   }
   
