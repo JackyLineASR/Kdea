@@ -31,7 +31,7 @@
         }
 
         & img:nth-child(1){
-            width: 100%;
+            width: 95% ;
             height: 100%;
             object-fit: cover;
         }
@@ -40,7 +40,7 @@
             width: 150px;
             height: 150px;
             position: absolute;
-            bottom: -5px;
+            bottom: 5%;
             right: -5px;
             border: 5px solid #fff;
             background: #00000099;
@@ -99,11 +99,11 @@
             & .sobre-info{
                 width: 100%;
                 display: flex;
-                box-shadow: 0 0 10px var(--color--yellow);
+                box-shadow: 0 0 5px var(--color--yellow);
                 transition: all .2s ease;
 
                 &:hover {
-                    box-shadow: 0 0 10px var(--color--black);
+                    box-shadow: 0 0 5px var(--color--black);
                     transform: scale(1.02);
                 }
 

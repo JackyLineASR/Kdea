@@ -166,13 +166,3 @@
         }
     }    
 }
-
-.footer::before{
-    content: '';
-    width: 90%;
-    left: 5%;
-    bottom: 0;
-    height: 1px;
-    background-color: var(--color--black);
-    position: absolute;
-}
