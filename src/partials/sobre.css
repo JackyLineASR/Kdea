@@ -128,11 +128,19 @@
                         text-transform: uppercase;
                         font-weight: 300;
                         font-size: 12px;
+
+                        @media (max-width: 768px){
+                            font-size: 10px;
+                        }
                     }
 
                     & span {
                         font-size: 30px;
                         font-weight: 400;
+
+                        @media (max-width: 768px){
+                            font-size: 26px;
+                        }
                     }
                 }
 

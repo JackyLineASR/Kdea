@@ -132,7 +132,7 @@
 
                     @media (max-width: 768px){
                         position: relative;
-                        right: 0;
+                        left: 0;
                     }
                 }
             }
