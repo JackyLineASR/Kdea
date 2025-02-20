@@ -168,7 +168,7 @@
             </button>
         </article>
 
-        <main class="swiper trajetoria-container">
+        <main id="trajetoria-swiper" class="swiper trajetoria-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide trajetoria-card" data-aos="fade-up" data-aos-delay="100">
                     <h2>2015 - 2016</h2>
@@ -192,6 +192,7 @@
                 </div>
             </div>
         </main>
+        
         
 
      </section>
@@ -557,10 +558,10 @@
         <main class="revista-container">
             <article class="revista-texts">
                 <h1 data-aos="fade-up" data-aos-delay="0">
-                    Conheça a <br><b>Revista K'dea 360</b>
+                    Inspire-se com <br><b>nossas obras!</b>
                 </h1>
                 <p data-aos="fade-up" data-aos-delay="300">
-                    A cada <b>3 MESES</b> coroamos uma obra com conceito inovador para ser a nova capa da revista K’dea 360
+                    Baixe nosso <b>portfólio e conheça projetos</b> que transformam ideias em realidade.
                 </p>
         
                 <div class="revista-timer">
@@ -746,25 +747,6 @@
      <!-- Inclua os arquivos do Swiper -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script>
-    const swiper = new Swiper('.swiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-        },
-    });
-</script>
-
 
     <script>
         function ClickToForm (){

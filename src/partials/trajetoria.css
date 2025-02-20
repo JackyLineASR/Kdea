@@ -49,6 +49,33 @@
         padding: 0 5% 5% 5%;
         gap: 20px;
 
+        & .swiper {
+            width: 100%;
+            max-width: 1280px;
+            padding: 0 5% 5% 5%;
+        }
+        
+        & .swiper-slide {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+            background-color: var(--color--white);
+        }
+        
+        & .swiper-slide h2 {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--color--yellow);
+        }
+        
+        & .swiper-slide p b {
+            color: #000;
+            font-weight: 400;
+        }
+
         @media (max-width: 768px) {
             flex-direction: column;
             padding: 10% 5%;
@@ -124,29 +151,4 @@
     width: 100%; /* A borda do terceiro card vai de 0% a 100% */
 }
 
-.swiper {
-    width: 100%;
-    max-width: 1280px;
-    padding: 0 5% 5% 5%;
-}
 
-.swiper-slide {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px;
-    background-color: var(--color--white);
-}
-
-.swiper-slide h2 {
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--color--yellow);
-}
-
-.swiper-slide p b {
-    color: #000;
-    font-weight: 400;
-}

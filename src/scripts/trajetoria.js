@@ -1,23 +1,29 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const options = {
-        root: null, // A janela de visualização
-        threshold: 0.5, // Quando 50% do elemento estiver visível
-    };
+document.addEventListener("DOMContentLoaded", function () {
+    // Inicializa o Swiper primeiro
+    const trajetoriaSwiper = new Swiper("#trajetoria-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+        on: {
+            slideChangeTransitionStart: function () {
+                // Remove a classe de todos os slides antes de adicionar ao novo ativo
+                document.querySelectorAll(".swiper-slide.trajetoria-card").forEach(card => {
+                    card.classList.remove("animate-border");
+                });
 
-    const observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Quando o card entra na visualização, adiciona a classe para a animação
-                entry.target.classList.add('animate-border');
-                observer.unobserve(entry.target); // Para de observar após a animação
+                // Adiciona animação apenas ao slide ativo
+                trajetoriaSwiper.slides[trajetoriaSwiper.activeIndex].classList.add("animate-border");
             }
-        });
-    }, options);
-
-    // Seleciona todos os cards de trajetoria
-    const trajetoriaCards = document.querySelectorAll('.trajetoria-card');
-
-    trajetoriaCards.forEach(card => {
-        observer.observe(card); // Inicia a observação para cada card
+        }
     });
 });
