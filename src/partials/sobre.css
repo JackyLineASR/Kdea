@@ -31,24 +31,31 @@
         }
 
         & img:nth-child(1){
-            width: 80%;
+            width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        & img:nth-child(2){
-            width: 200px;
-            height: 200px;
+        & div{
+            width: 150px;
+            height: 150px;
             position: absolute;
-            bottom: 5%;
-            right: 0;
-            background-color: var(--color--black);
+            bottom: -5px;
+            right: -5px;
+            border: 5px solid #fff;
+            background: #00000099;
+            backdrop-filter: blur(2px);
             display: flex;
             align-items: center;
             justify-content: center;
             object-fit: contain;
-            padding: 40px;
-            border: 2px solid #fff;
+            padding: 20px;
+            box-shadow: 0 0 100px rgba(255, 255, 255, 0.9);
+
+            & img {
+                position: relative;
+                z-index: 2;
+            }
 
             @media (max-width: 768px){
                 width: 150px;
@@ -87,30 +94,50 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            flex-direction: column;
-            gap: 10px;
+            gap: 20px;
 
             & .sobre-info{
                 width: 100%;
                 display: flex;
-                flex-direction: column;
+                box-shadow: 0 0 10px var(--color--yellow);
+                transition: all .2s ease;
+
+                &:hover {
+                    box-shadow: 0 0 10px var(--color--black);
+                    transform: scale(1.02);
+                }
+
+                &:hover .sobre-text{
+                    background-color: var(--color--black);
+                    color: var(--color--white);
+                }
 
                 & .sobre-text {
                     width: 100%;
+                    background-color: var(--color--yellow);
+                    color: var(--color--black);
                     display: flex;
                     justify-content: space-between;
-                    padding: 15px 0 5px 0;
+                    padding: 20px 15px;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0px;
+                    transition: all .2s ease;
 
                     & h4 {
                         text-transform: uppercase;
+                        font-weight: 300;
+                        font-size: 12px;
+                    }
+
+                    & span {
+                        font-size: 30px;
                         font-weight: 400;
                     }
                 }
 
                 & .sobre-bar {
-                    border-bottom: 1px solid var(--color--yellow);
-                    height: 1px;
-                    transition: width 2s ease-out; 
+                    display: none;
                 }
             }
         }
