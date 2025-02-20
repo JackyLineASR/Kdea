@@ -168,34 +168,31 @@
             </button>
         </article>
 
-        <main class="trajetoria-container">
-            <div class="trajetoria-card" data-aos="fade-up" data-aos-delay="100">
-                <h2>
-                    2015 - 2016
-                </h2>
-                <p>
-                    Fundada em março de 2015, a empresa participou da <b>obra do Museu do Amanhã</b>, construindo o cubo de Sergio Marimba. Em 2016, integrou a reforma do <b>Hotel Nacional, de Oscar Niemeyer.</b>
-                </p>
-            </div>
-
-            <div class="trajetoria-card" data-aos="fade-up" data-aos-delay="400">
-                <h2>
-                    2022
-                </h2>
-                <p>
-                    Projetamos e construímos as <b>cabanas da família Gagliasso no Rancho da Montanha</b>, um projeto exclusivo de Duda Porto, que combina sofisticação e harmonia com a natureza.
-                </p>
-            </div>
-
-            <div class="trajetoria-card" data-aos="fade-up" data-aos-delay="700">
-                <h2>
-                    2024 - 2025
-                </h2>
-                <p>
-                    Construímos o <b>hangar do Neymar Jr</b>. no condomínio Portobello. Em 2025, celebramos <b>10 anos de história</b> com o lançamento da revista Kdea 360, marcando essa trajetória de sucesso.
-                </p>
+        <main class="swiper trajetoria-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide trajetoria-card" data-aos="fade-up" data-aos-delay="100">
+                    <h2>2015 - 2016</h2>
+                    <p>
+                        Fundada em março de 2015, a empresa participou da <b>obra do Museu do Amanhã</b>, construindo o cubo de Sergio Marimba. Em 2016, integrou a reforma do <b>Hotel Nacional, de Oscar Niemeyer.</b>
+                    </p>
+                </div>
+        
+                <div class="swiper-slide trajetoria-card" data-aos="fade-up" data-aos-delay="400">
+                    <h2>2022</h2>
+                    <p>
+                        Projetamos e construímos as <b>cabanas da família Gagliasso no Rancho da Montanha</b>, um projeto exclusivo de Duda Porto, que combina sofisticação e harmonia com a natureza.
+                    </p>
+                </div>
+        
+                <div class="swiper-slide trajetoria-card" data-aos="fade-up" data-aos-delay="700">
+                    <h2>2024 - 2025</h2>
+                    <p>
+                        Construímos o <b>hangar do Neymar Jr</b>. no condomínio Portobello. Em 2025, celebramos <b>10 anos de história</b> com o lançamento da revista Kdea 360, marcando essa trajetória de sucesso.
+                    </p>
+                </div>
             </div>
         </main>
+        
 
      </section>
 
@@ -746,6 +743,29 @@
 
      <!-- Scripts js -->
 
+     <!-- Inclua os arquivos do Swiper -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+</script>
+
+
     <script>
         function ClickToForm (){
             const click = document.getElementById('contactForm');
@@ -798,7 +818,7 @@
 
     </script>
 
-<script>
+    <script>
     window.addEventListener('scroll', function() {
       const footerGradient = document.querySelector('.footer-gradient');
       const sections = document.querySelectorAll('.revista'); // Seleciona as seções com fundo escuro
