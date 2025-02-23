@@ -27,93 +27,6 @@
         }
     }
 
-    & .escolha-container{
-        width: 100%;
-        max-width: 1280px;
-        padding: 2.5% 5%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-
-        @media (max-width: 768px){
-            gap: 20px;
-        }
-
-        & .escolha-card{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-
-            @media (max-width: 768px){
-                flex-direction: column;
-            }
-
-            & .escolha-card-none {
-                width: 40%;
-
-                @media (max-width: 768px){
-                    display: none;
-                }
-            }
-
-            & .escolha-card-icon{
-                width: 100px;
-                height: 100px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
-                background-color: var(--color--black);
-                transition: all .2s ease;
-
-                &:hover {
-                    transform: scale(0.95);
-                }
-
-                & i {
-                    color: var(--color--yellow);
-                    font-size: 30px;
-                }
-            }
-
-            & .escolha-card-texts{
-                width: 40%;
-                height: 250px;
-                padding: 30px;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                gap: 20px;
-                background-color: var(--color--gray);
-                clip-path: polygon(90% 0, 100% 10%, 100% 100%, 10% 100%, 0 90%, 0 0);
-                transition: all .2s ease;
-
-                &:hover {
-                    transform: scale(1.05);
-                    background-color: var(--color--black);
-
-                    & h1 {
-                        color: #fff;
-                    }
-
-                    & p {
-                        color: #fff;
-                    }
-                }
-
-                @media (max-width: 768px){
-                    width: 100%;
-                    height: 200px;
-                }
-            }
-        }
-    }
-
     & .escolha-button{
         width: 100%;
         max-width: 1280px;
@@ -123,6 +36,76 @@
         padding: 2%;
     }
 }
+
+.escolha-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.escolha-card {
+    display: flex;
+    flex-direction: column;
+    margin: 20px ;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.escolha-card:hover {
+    transform: scale(1.05);
+}
+
+.escolha-card-texts{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--color--gray);
+    clip-path: polygon(90% 0, 100% 10%, 100% 100%, 10% 100%, 0 90%, 0 0);
+    transition: all .2s ease;
+
+    & h1 {
+        font-size: 22px;
+    }
+
+    & p {
+        font-size: 16px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+    }
+
+    @media (max-width: 768px){
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.escolha-card-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color--black);
+    clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
+    margin-bottom: 20px;
+}
+
+.escolha-card-icon i {
+    color: var(--color--yellow);
+    font-size: 30px;
+}
+
 
 .escolha-background{
     width: 100%;
@@ -140,30 +123,19 @@
 
 .escolha-container::before{
     content: '';
-    width: 2px;
-    height: 80%;
+    width: 80%;
+    height: 2px;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    top: 50%;
+    top: 55%;
     background-color: var(--color--black);
     position: absolute;
     z-index: -1;
     opacity: 0.1;
 
     @media (max-width: 768px){
-        height: 90%;   
+        height: 2px;
+        width: 100%;   
         opacity: 0.1; 
-    }
-}
-
-.escolha-card:nth-child(2){
-    @media (max-width: 768px){
-        flex-direction: column-reverse!important;
-    }
-}
-
-.escolha-card:nth-child(4){
-    @media (max-width: 768px){
-        flex-direction: column-reverse!important;
     }
 }

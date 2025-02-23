@@ -65,6 +65,7 @@ button {
 html, body {
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Ajustes para iPhone notch e safe-area */

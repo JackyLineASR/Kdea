@@ -24,6 +24,14 @@
     <!-- Libs -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- CSS do Splide -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+
+<!-- JS do Splide -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+
+
     
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -63,11 +71,38 @@
         <header class="header">
             <nav class="navbar" data-aos="fade-up" data-aos-delay="0">
                 <img src="src/assets/kdea-construtora-logo-black.png" alt="logo da construtora k'dea" data-aos="fade-up" data-aos-delay="300">
-                <button class="button-v1" onclick={OpenWpp()} data-aos="fade-up" data-aos-delay="300">
+                
+                <!-- Botão de menu para mobile -->
+                <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            
+                <!-- Menu de navegação -->
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="#sobre">Sobre nós</a></li>
+                        <li><a href="#porque">Escolha</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#revista">Revista K'dea</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Botão de solicitar orçamento -->
+                <button class="button-v1" onclick="OpenWpp()" data-aos="fade-up" data-aos-delay="300">
                     Solicitar orçamento
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </nav>
+
+            <script>
+                function toggleMenu() {
+    const menu = document.querySelector('.navbar-links');
+    menu.classList.toggle('open');
+}
+
+            </script>
+
         </header>
 
         <main class="home-main">
@@ -197,7 +232,7 @@
 
      </section>
 
-     <section class="porque">
+     <section class="porque" id="porque">
         <article class="porque-top">
             <h1 data-aos="fade-up" data-aos-delay="100">
                 Afinal, <b>por que escolher</b> nossa construtora?
@@ -302,7 +337,7 @@
                 </div>
 
                 <div class="porque-card-image">
-                    <img src="/src/assets/acustica.webp" alt="imamge de uma obra em steel frame com isolamento acústico" loading="lazy">
+                    <img src="/src/assets/casa01.webp" alt="imamge de uma obra em steel frame com isolamento acústico" loading="lazy">
                 </div>
             </div>
 
@@ -342,7 +377,7 @@
 
      </section>
 
-     <section class="projetos">
+     <section class="projetos" id="projetos">
         <div class="projetos-background"></div>
 
         <article class="projetos-top">
@@ -455,94 +490,93 @@
             </h1>
         </article>
 
-        <main class="escolha-container">
-            <div class="escolha-card" data-aos="fade-up" data-aos-delay="0">
-                <div class="escolha-card-none"></div>
-
-                <div class="escolha-card-icon">
-                    <i class="fa-solid fa-paste"></i>
-                </div>
-
-                <div class="escolha-card-texts">
-                    <h1>
-                        Organização
-                    </h1>
-                    <p>
-                        Gerenciamos cada etapa do projeto com precisão, garantindo uma obra estruturada, sem desperdícios e dentro dos prazos estabelecidos.
-                    </p>
-                </div>
+        <div class="splide escolha-container">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="escolha-card">
+                            <div class="escolha-card-icon">
+                                <i class="fa-solid fa-paste"></i>
+                            </div>
+                            <div class="escolha-card-texts">
+                                <h1>Organização</h1>
+                                <p>Gerenciamos cada etapa do projeto com precisão, garantindo uma obra estruturada.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="escolha-card">
+                            <div class="escolha-card-icon">
+                                <i class="fa-solid fa-pen-ruler"></i>
+                            </div>
+                            <div class="escolha-card-texts">
+                                <h1>Planejamento</h1>
+                                <p>Elaboramos cada detalhe com estratégias eficientes, reduzindo custos e otimizando processos.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="escolha-card">
+                            <div class="escolha-card-icon">
+                                <i class="fa-solid fa-compass-drafting"></i>
+                            </div>
+                            <div class="escolha-card-texts">
+                                <h1>Arquitetos de alto nível</h1>
+                                <p>Nossa equipe combina criatividade e técnica para desenvolver projetos inovadores.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="escolha-card">
+                            <div class="escolha-card-icon">
+                                <i class="fa-solid fa-person-digging"></i>
+                            </div>
+                            <div class="escolha-card-texts">
+                                <h1>Construtores qualificados</h1>
+                                <p>Profissionais experientes executam cada obra com excelência.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="escolha-card">
+                            <div class="escolha-card-icon">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div class="escolha-card-texts">
+                                <h1>Empresa de excelência</h1>
+                                <p>Oferecemos soluções completas em steel frame e drywall.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
+        </div>
+        
+        
 
-            <div class="escolha-card" data-aos="fade-up" data-aos-delay="0">
-                <div class="escolha-card-texts">
-                    <h1>
-                        Planejamento
-                    </h1>
-                    <p>
-                        Elaboramos cada detalhe com estratégias eficientes, reduzindo custos e otimizando processos para uma construção ágil e assertiva.
-                    </p>
-                </div>
+        <script>
+           document.addEventListener("DOMContentLoaded", function () {
+    new Splide(".splide", {
+        type: "loop", // Loop infinito
+        perPage: 3, // 1 card no mobile
+        perMove: 1, // Sempre avança 1 por vez
+        gap: "20px", // Espaço entre os cards
+        autoplay: true, // Ativa o autoplay
+        interval: 3000, // Troca a cada 3 segundos
+        pauseOnHover: true, // Pausa ao passar o mouse
+        drag: true, // Permite arrastar
+        arrows: false,       // Remove os botões de navegação (anterior e próximo)
+        pagination: false,  
+        breakpoints: {
+            768: {
+                perPage: 1, // Exibe 3 cards no desktop
+            }
+        }
+    }).mount();
+});
 
-                <div class="escolha-card-icon">
-                    <i class="fa-solid fa-pen-ruler"></i>
-                </div>
-
-                <div class="escolha-card-none"></div>
-
-            </div>
-
-            <div class="escolha-card" data-aos="fade-up" data-aos-delay="0">
-                <div class="escolha-card-none"></div>
-
-                <div class="escolha-card-icon">
-                    <i class="fa-solid fa-compass-drafting"></i>
-                </div>
-
-                <div class="escolha-card-texts">
-                    <h1>
-                        Arquitetos de alto nível
-                    </h1>
-                    <p>
-                        Nossa equipe de arquitetos combina criatividade e técnica para desenvolver projetos inovadores, funcionais e personalizados para cada cliente.
-                    </p>
-                </div>
-            </div>
-
-            <div class="escolha-card" data-aos="fade-up" data-aos-delay="0">
-                <div class="escolha-card-texts">
-                    <h1>
-                        Construtores qualificados
-                    </h1>
-                    <p>
-                        Profissionais experientes executam cada obra com excelência, seguindo normas rigorosas para garantir qualidade, segurança e durabilidade.
-                    </p>
-                </div>
-
-                <div class="escolha-card-icon">
-                    <i class="fa-solid fa-person-digging"></i>
-                </div>
-
-                <div class="escolha-card-none"></div>
-
-            </div>
-
-            <div class="escolha-card" data-aos="fade-up" data-aos-delay="0">
-                <div class="escolha-card-none"></div>
-
-                <div class="escolha-card-icon">
-                    <i class="fa-solid fa-building"></i>
-                </div>
-
-                <div class="escolha-card-texts">
-                    <h1>
-                        Empresa de excelência
-                    </h1>
-                    <p>
-                        Com anos de experiência, oferecemos soluções completas em steel frame e drywall, unindo tecnologia, inovação e compromisso com o cliente.
-                    </p>
-                </div>
-            </div>
-        </main>
+        </script>
+        
 
         <div class="escolha-button" data-aos="fade-up" data-aos-delay="100">
             <button class="button-v1" onclick={OpenWpp()}>
@@ -552,7 +586,7 @@
         </div>
      </section> 
 
-     <section class="revista">
+     <section class="revista" id="revista">
         <div class="revista-background"></div>
 
         <main class="revista-container">
@@ -598,7 +632,7 @@
         
      </section>
 
-     <section class="footer">
+     <section class="footer" id="contato">
         <article class="footer-left">
             <h1 data-aos="fade-up" data-aos-delay="0">
                 <b>Entre em contato</b> agora e fale com nosso time
