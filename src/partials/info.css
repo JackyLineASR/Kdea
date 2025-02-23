@@ -84,7 +84,6 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        border: 1px solid red;
 
         @media (max-width: 768px){
             flex-direction: column;
@@ -95,7 +94,6 @@
             border-right: 1px solid #fff;
             padding: 0 40px 0 0;
             width: 150px;
-            border: 1px solid red;
 
             @media (max-width: 768px){
                 width: 100%;
